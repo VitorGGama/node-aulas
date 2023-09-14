@@ -1,4 +1,5 @@
 import http from 'http';  //estamos inportando o modulo nativo "http".
+import fs from 'fs/promises'; //file system : permite ao servidor acesso ao sistema de arquivos(módulo nativo)
 
 //costante que monitora requisiçoes e recebe dois parâmetros req(requisição) e res(resposta)
 const monitorRequisicao = (req, res) =>{  // arrow function = >
@@ -9,18 +10,25 @@ const monitorRequisicao = (req, res) =>{  // arrow function = >
     //Avaliando cada requisição (a partir do link)
     switch(req.url){
         case '/':
-            res.end('servidor Node rodando no navegador.')
+            //fs faz o carregamento e leitura do arquivo
+            fs.readFile('paginas/index.html')
+            //depois de pronto, envia o conteudo como resposta
+            .then(conteudo => res.end(conteudo));
             //exibir index.html
         break;
         
         case '/sobre':
+            fs.readFile('paginas/sobre.html')
+            .then(conteudo => res.end(conteudo));
             //exibir sobre.html
 
         break;
         
         default:
+            res.writeHead(404);
+            fs.readFile( 'paginas/404.html')
+            .then(conteudo => res.end(conteudo));
             //exibir 404.html
-
         break;
     }
 };
