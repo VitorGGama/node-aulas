@@ -1,7 +1,4 @@
-const ola = require('./funcoes.js');
-//importando com a sintaxe antiga
+const ola = require('./funcoes.js');  // importando com a sintaxe antiga
+// import ola from './funcoes.js'   // forma atual de importar
 
-
-//import ola from './funcoes'  //Forma atual de importar
-
-console.log(ola("Vitor "));
+console.log(ola("Zezinho"));

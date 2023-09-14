@@ -1,30 +1,21 @@
-let aluno = "Maria";
-let nota1 = 9.8;
-let nota2 = 2.2;
-
+let aluno = "Zezin";
+let nota1 = 7.8;
+let nota2 = 6.4;
 let media = (nota1 + nota2) / 2;
-
-console.log(media);   
-console.log("------------")    
-
-
+console.log(media);
+console.log("--------------------");
 
 let dados = {
-    aluno : "Joao",
-    idade : 20,
-    signo : "cabra"
-
-}
+    nome : "Manoel Gomes",
+    idade: 18,
+    signo: "Áries"
+};
 console.log(dados.signo);
 console.table(dados);
+console.log("--------------------");
 
-if (media >= 7){
-    console.log(`O aluno(a) ${aluno} está aprovado:`)
+if(media >= 7){
+    console.log(`O aluno ${aluno} está aprovado :) `)
 } else {
-        console.log(`O aluno(a) ${aluno} está reprovado:`)
-    };
-
-
-
-
-
+    console.log(`O aluno ${aluno} está reprovado :( `)
+}
