@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "Criação de servidor utilizando o o framework Express JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vitor Gama",
+  "license": "ISC"
+}
