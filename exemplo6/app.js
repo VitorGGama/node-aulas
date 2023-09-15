@@ -6,18 +6,21 @@ const app = express();
 //Configurar as rotas de acesso 
 
 //Raiz
+//index
 app.get('/', (req, res)=> {
-    //re
-    res.render('paginas/index')
-    
+    //res.send('Bem vindo ao servidor ExpressJs. Se não fosse o NPX...')
+    const bandas = ['Ira', 'Legião Urbana', 'Kid Abelha', 'Titãs', 'Engenheiros do Hawai'];    
+    res.render('paginas/index', {bandas});    
 });
 
+//sobre
 app.get('/sobre', (req, res)=> {
     //re
     res.render('paginas/sobre')
     
 });
 
+//contato
 app.get('/contato', (req, res)=> {
     //re
     res.render('paginas/contato')
