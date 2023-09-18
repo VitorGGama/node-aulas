@@ -9,7 +9,7 @@ const app = express();
 //index
 app.get('/', (req, res)=> {
     //res.send('Bem vindo ao servidor ExpressJs. Se não fosse o NPX...')
-    const bandas = ['Ira', 'Legião Urbana', 'Kid Abelha', 'Titãs', 'Engenheiros do Hawai'];    
+    const bandas = ['Ira', 'Renato e seus blukeaps', 'Kid Abelha', 'Titãs', 'Engenheiros do Hawai'];    
     res.render('paginas/index', {bandas});    
 });
 
